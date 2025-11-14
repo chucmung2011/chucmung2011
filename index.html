@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chúc mừng 20/11</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Segoe UI", sans-serif;
+            height: 100vh;
+            background: radial-gradient(circle at top, #ffe6f2, #ffd1dc, #ffc2a0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .card {
+            width: 450px;
+            padding: 28px;
+            background: rgba(255,255,255,0.92);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+            text-align: center;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #ff4b7d;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #ff8a3d;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+
+        .image-box {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+
+        .image-box img {
+            width: 90%;
+            border-radius: 15px;
+            border: 3px solid #ffb6c9;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+
+        p {
+            font-size: 17px;
+            color: #444;
+            line-height: 1.55;
+        }
+
+        .members {
+            margin-top: 18px;
+            color: #555;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .members b {
+            color: #ff4b7d;
+        }
+
+        /* Hiệu ứng trái tim bay */
+        .heart {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: #ff4b7d;
+            transform: rotate(45deg);
+            opacity: 0.75;
+            animation: rise 7s linear infinite;
+        }
+
+        .heart::before, .heart::after {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: #ff4b7d;
+            border-radius: 50%;
+        }
+
+        .heart::before { top: -8px; left: 0; }
+        .heart::after { left: -8px; top: 0; }
+
+        .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .heart:nth-child(2) { left: 30%; animation-delay: 1.5s; }
+        .heart:nth-child(3) { left: 50%; animation-delay: 3s; }
+        .heart:nth-child(4) { left: 70%; animation-delay: 4.5s; }
+        .heart:nth-child(5) { left: 90%; animation-delay: 6s; }
+
+        @keyframes rise {
+            0% { bottom: -40px; opacity: 0; transform: rotate(45deg) scale(0.8); }
+            40% { opacity: 0.9; }
+            100% { bottom: 110vh; opacity: 0; transform: rotate(45deg) scale(1.2); }
+        }
+
+        @keyframes float {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hiệu ứng trái tim bay -->
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+
+    <div class="card">
+        <h1>20/11</h1>
+        <h2>Tri Ân Thầy Cô</h2>
+
+        <!-- KHUNG ẢNH ĐẸP -->
+        <div class="image-box">
+            <img src="20-11.jpg" alt="Ảnh 20/11">
+        </div>
+
+        <p>
+            Chúng em xin gửi lời chúc tốt đẹp nhất tới các thầy cô 
+            nhân ngày Nhà giáo Việt Nam.  
+            Kính chúc thầy cô luôn mạnh khỏe, hạnh phúc và tràn đầy nhiệt huyết.
+        </p>
+
+        <div class="members">
+            <p><b>Thành viên nhóm:</b></p>
+            Nguyễn Thị Cúc <br>
+            Nguyễn Thị Yến Chi <br>
+            Nguyễn Anh Tú <br>
+            Nguyễn Thị Kim Phượng <br>
+            Nguyễn Phương Nam
+        </div>
+    </div>
+
+</body>
+</html>
